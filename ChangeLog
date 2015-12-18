@@ -1,6 +1,14 @@
 CHANGES
 =======
 
+1.28.0
+------
+
+* Add 'requires_beating' property to coordination driver
+* {pg,my}sql: fix AttributeError on connection failure
+* tests: allow ipc to bypass blocking=False test
+* pgsql: remove unused left-over code
+
 1.27.0
 ------
 
