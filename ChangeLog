@@ -1,6 +1,20 @@
 CHANGES
 =======
 
+1.29.0
+------
+
+* Updated from global requirements
+* Add basic file content schema validation
+* Spice up the driver summary/info page
+* Make all locks operate the same when fetched from different coordinators
+* Add noted driver weaknesses onto the drivers docs
+* Updated from global requirements
+* File: read member id from file with suffix ".raw"
+* Reduce duplication of code in handling multi-type blocking argument
+* Updated from global requirements
+* Add comment in memcache explaining the current situation with lock release
+
 1.28.0
 ------
 
@@ -8,6 +22,7 @@ CHANGES
 * {pg,my}sql: fix AttributeError on connection failure
 * tests: allow ipc to bypass blocking=False test
 * pgsql: remove unused left-over code
+* Add 'is_still_owner' lock test function
 
 1.27.0
 ------
