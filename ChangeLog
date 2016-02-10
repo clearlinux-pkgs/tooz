@@ -1,6 +1,33 @@
 CHANGES
 =======
 
+1.30.0
+------
+
+* Updated from global requirements
+* pgsql: fix hostname parsing
+* Updated from global requirements
+* Updated from global requirements
+* Update voluptuous requirement
+* Updated from global requirements
+* Updated from global requirements
+* Have zookeeper heartbeat perform basic get
+* Add desired characteristics strict subset validation
+* Add base64 key encoder (and validations)
+* Use voluptuous instead of jsonschema
+* Add programatic introspection of drivers characteristic(s)
+* Updated from global requirements
+* pep8: fix remaining errors and enable all checks
+* Use utils.convert_blocking to convert blocking argument
+* Adjust some of the zookeeper exception message
+* Fix etcd env setup
+* tests: do not hardcode /tmp
+* utils: replace exception_message by exception_to_unicode
+* Add a default port and default host
+* etcd: driver with lock support
+* Use utils.to_binary instead of using redis module equivalent
+* Remove tested under 2.6 from docs
+
 1.29.0
 ------
 
