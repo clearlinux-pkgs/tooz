@@ -1,6 +1,22 @@
 CHANGES
 =======
 
+1.34.0
+------
+
+
+1.33.0
+------
+
+* Updated from global requirements
+* Compute requires_beating
+* Fix calling acquire(blocking=False) twice leads to a deadlock
+
+1.32.0
+------
+
+* Raises proper error when unwatching a group
+
 1.31.0
 ------
 
