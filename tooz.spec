@@ -4,7 +4,7 @@
 #
 Name     : tooz
 Version  : 1.34.0
-Release  : 27
+Release  : 28
 URL      : http://tarballs.openstack.org/tooz/tooz-1.34.0.tar.gz
 Source0  : http://tarballs.openstack.org/tooz/tooz-1.34.0.tar.gz
 Summary  : Coordination library for distributed systems.
