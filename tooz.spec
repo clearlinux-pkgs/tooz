@@ -4,7 +4,7 @@
 #
 Name     : tooz
 Version  : 1.34.0
-Release  : 29
+Release  : 30
 URL      : http://tarballs.openstack.org/tooz/tooz-1.34.0.tar.gz
 Source0  : http://tarballs.openstack.org/tooz/tooz-1.34.0.tar.gz
 Summary  : Coordination library for distributed systems.
@@ -12,10 +12,12 @@ Group    : Development/Tools
 License  : Apache-2.0
 Requires: tooz-python
 BuildRequires : Babel-python
+BuildRequires : Jinja2
 BuildRequires : PyMySQL-python
 BuildRequires : Sphinx-python
 BuildRequires : coverage-python
 BuildRequires : discover-python
+BuildRequires : docutils-python
 BuildRequires : flake8
 BuildRequires : flake8-python
 BuildRequires : futures-python
@@ -28,6 +30,7 @@ BuildRequires : oslo.i18n-python
 BuildRequires : oslo.utils-python
 BuildRequires : oslosphinx-python
 BuildRequires : pbr
+BuildRequires : pep8
 BuildRequires : pip
 BuildRequires : psycopg2-python
 BuildRequires : pymemcache-python
