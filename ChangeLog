@@ -1,6 +1,59 @@
 CHANGES
 =======
 
+1.40.0
+------
+
+* Add docs for new consul driver
+* Change dependency to use flavors
+* Run doc8 only in pep8 target
+* Move pep8 requirements in their own target
+* zookeeper: do not hard depend on eventlet
+* Remove unused iso8601 dependency
+* tests: remove testscenario usage
+* file: set no timeout by default
+* tests: move bad_url from scenarios to static test
+* Expose timeout capabilities and use them for tests
+* Use pifpaf to setup daemons
+
+1.39.0
+------
+
+* Updated from global requirements
+
+1.38.0
+------
+
+* Using LOG.warning instead of LOG.warn
+* Updated from global requirements
+* redis: do not force LuaLock
+* Fix coordinator typo
+* Updated from global requirements
+* Ensure etcd is in developer and driver docs
+
+1.37.0
+------
+
+* Remove unused consul future result
+* Updated from global requirements
+* Add a consul based driver
+* file: make python2 payload readable from python3
+
+1.36.0
+------
+
+* Updated from global requirements
+
+1.35.0
+------
+
+* Drop babel as requirement since its not used
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* coordination: expose a heartbeat loop method
+
 1.34.0
 ------
 
