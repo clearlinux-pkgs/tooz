@@ -1,6 +1,13 @@
 CHANGES
 =======
 
+1.41.0
+------
+
+* File driver: properly handle Windows paths
+* Updated from global requirements
+* Updated from global requirements
+
 1.40.0
 ------
 
