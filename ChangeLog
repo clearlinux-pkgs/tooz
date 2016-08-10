@@ -1,6 +1,17 @@
 CHANGES
 =======
 
+1.42.0
+------
+
+* etcd: don't run heartbeat() concurrently
+* etcd: properly block when using 'wait'
+* Share _get_random_uuid() among all tests
+* Updated from global requirements
+* Clean leave group hooks when unwatching
+* Fix the test test_unwatch_elected_as_leader
+* Updated from global requirements
+
 1.41.0
 ------
 
