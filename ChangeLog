@@ -1,6 +1,11 @@
 CHANGES
 =======
 
+1.43.0
+------
+
+* Makedirs only throws oserror, so only catch that
+
 1.42.0
 ------
 
