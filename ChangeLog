@@ -1,6 +1,21 @@
 CHANGES
 =======
 
+1.44.0
+------
+
+* Changed the home-page link
+* file: update .metadata atomically
+* file: return converted voluptuous data
+* file: move _load_and_validate to a method
+* file: move _read_{group,member}_id to staticmethod-s
+* etcd: run tests in clustering mode too
+* Use method ensure_tree from oslo.utils
+* Switch from Python 3.4 to Python 3.5
+* Install only needed packages
+* Fix a typo in file.py
+* Update etcd version in tests
+
 1.43.0
 ------
 
