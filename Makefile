@@ -1,5 +1,5 @@
 PKG_NAME := tooz
-URL := http://tarballs.openstack.org/tooz/tooz-1.43.0.tar.gz
+URL := http://tarballs.openstack.org/tooz/tooz-1.44.0.tar.gz
 ARCHIVES :=
 
 include ../common/Makefile.common
