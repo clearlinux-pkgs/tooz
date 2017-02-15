@@ -1,6 +1,55 @@
 CHANGES
 =======
 
+1.48.0
+------
+
+* Fix test function name with two underscores to have only one
+
+1.47.0
+------
+
+* Add partitioner implementation
+* Stop making tooz.utils depending on tooz.coordination
+* [doc] Note lack of constraints is a choice
+* The 'moves.moved_class' function creates a new class
+* Add weight support to the hashring
+* coordination: allow to pass capabilities in join_group_create()
+* coordination: fix moved_class usage for ToozError
+* zookeeper: switch to standard group membership watching
+* Add a hashring implementation
+* Move ToozError to root module
+* Fixup concurrent modification
+* Replaces uuid.uuid4 with uuidutils.generate_uuid()
+
+1.46.0
+------
+
+* Do not re-set the members cache for watchers by default
+* coordination: add __repr__ for join/leave events
+* coordination: renforce event based testing
+* Factorize member_id in the base coordinator class
+* Use the internal group of list rather than listing the groups
+* Move the cached-based watcher implementation into its own class
+
+1.45.0
+------
+
+* Factorize group quit on stop()
+* coordination: make get_members() return a set
+* Replace 'assertTrue(a (not)in b)' with 'assert(Not)In(a, b)'
+* Changed author and author-email
+* redis: make sure we don't release and heartbeat a lock at the same time
+* coordinator: add join_group_create
+* Replace retrying with tenacity
+* Add CONTRIBUTING.rst
+* Replace 'assertTrue(a in b)' with 'assertIn(a, b)' and 'assertFalse(a in b)' with 'assertNotIn(a, b)'
+* Using assertIsNone() instead of assertEqual(None, ...)
+* tox: use pretty tox output
+* tox: install docs dependency in docs target and reno
+* Bump hacking to 0.12
+* Add reno for release notes management
+
 1.44.0
 ------
 
@@ -25,6 +74,7 @@ CHANGES
 ------
 
 * etcd: don't run heartbeat() concurrently
+* Raise tooz error when unexpected last entries found
 * etcd: properly block when using 'wait'
 * Share _get_random_uuid() among all tests
 * Updated from global requirements
