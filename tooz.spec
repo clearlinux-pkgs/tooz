@@ -6,7 +6,7 @@
 #
 Name     : tooz
 Version  : 1.48.0
-Release  : 41
+Release  : 42
 URL      : http://tarballs.openstack.org/tooz/tooz-1.48.0.tar.gz
 Source0  : http://tarballs.openstack.org/tooz/tooz-1.48.0.tar.gz
 Source99 : http://tarballs.openstack.org/tooz/tooz-1.48.0.tar.gz.asc
@@ -14,21 +14,45 @@ Summary  : Coordination library for distributed systems.
 Group    : Development/Tools
 License  : Apache-2.0
 Requires: tooz-python
+Requires: PyMySQL
+Requires: Sphinx
+Requires: coverage
+Requires: enum34
+Requires: fasteners
+Requires: fixtures
+Requires: futures
+Requires: futurist
+Requires: kazoo
+Requires: msgpack-python
+Requires: os-testr
+Requires: oslo.serialization
+Requires: oslo.utils
+Requires: oslosphinx
+Requires: pbr
+Requires: psycopg2
+Requires: pymemcache
+Requires: python-mock
+Requires: python-subunit
+Requires: redis
+Requires: reno
+Requires: requests
+Requires: six
+Requires: stevedore
+Requires: testrepository
+Requires: testtools
+Requires: voluptuous
+Requires: zake
 BuildRequires : Babel-python
 BuildRequires : PyMySQL-python
 BuildRequires : Sphinx-python
 BuildRequires : configparser-python
 BuildRequires : coverage-python
 BuildRequires : discover-python
-BuildRequires : enum34-python
-BuildRequires : extras
-BuildRequires : extras-python
 BuildRequires : flake8
 BuildRequires : flake8-python
 BuildRequires : futures-python
 BuildRequires : iso8601-python
 BuildRequires : kazoo-python
-BuildRequires : markupsafe-python
 BuildRequires : msgpack-python-python
 BuildRequires : netaddr-python
 BuildRequires : netifaces-python
@@ -68,22 +92,6 @@ Tooz
 %package python
 Summary: python components for the tooz package.
 Group: Default
-Requires: PyMySQL-python
-Requires: coverage-python
-Requires: enum34-python
-Requires: futures-python
-Requires: kazoo-python
-Requires: msgpack-python-python
-Requires: oslo.utils-python
-Requires: oslosphinx-python
-Requires: psycopg2-python
-Requires: pymemcache-python
-Requires: python-subunit-python
-Requires: redis-python
-Requires: six-python
-Requires: testrepository-python
-Requires: testtools-python
-Requires: zake-python
 
 %description python
 python components for the tooz package.
@@ -94,12 +102,12 @@ python components for the tooz package.
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1487194404
+export SOURCE_DATE_EPOCH=1489025894
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1487194404
+export SOURCE_DATE_EPOCH=1489025894
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
