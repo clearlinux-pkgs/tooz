@@ -6,7 +6,7 @@
 #
 Name     : tooz
 Version  : 1.48.0
-Release  : 42
+Release  : 43
 URL      : http://tarballs.openstack.org/tooz/tooz-1.48.0.tar.gz
 Source0  : http://tarballs.openstack.org/tooz/tooz-1.48.0.tar.gz
 Source99 : http://tarballs.openstack.org/tooz/tooz-1.48.0.tar.gz.asc
@@ -42,45 +42,11 @@ Requires: testrepository
 Requires: testtools
 Requires: voluptuous
 Requires: zake
-BuildRequires : Babel-python
-BuildRequires : PyMySQL-python
-BuildRequires : Sphinx-python
-BuildRequires : configparser-python
-BuildRequires : coverage-python
-BuildRequires : discover-python
-BuildRequires : flake8
-BuildRequires : flake8-python
-BuildRequires : futures-python
-BuildRequires : iso8601-python
-BuildRequires : kazoo-python
-BuildRequires : msgpack-python-python
-BuildRequires : netaddr-python
-BuildRequires : netifaces-python
-BuildRequires : oslo.i18n-python
-BuildRequires : oslo.utils-python
-BuildRequires : oslosphinx-python
 BuildRequires : pbr
 BuildRequires : pip
-BuildRequires : psycopg2-python
-BuildRequires : pymemcache-python
 BuildRequires : python-dev
-BuildRequires : python-mock
-BuildRequires : python-subunit-python
 BuildRequires : python3-dev
-BuildRequires : pytz-python
-BuildRequires : redis-python
-BuildRequires : retrying-python
 BuildRequires : setuptools
-BuildRequires : six
-BuildRequires : six-python
-BuildRequires : stevedore-python
-BuildRequires : sysv_ipc-python
-BuildRequires : testrepository-python
-BuildRequires : testscenarios
-BuildRequires : testscenarios-python
-BuildRequires : testtools
-BuildRequires : testtools-python
-BuildRequires : zake-python
 
 %description
 Tooz
@@ -102,12 +68,12 @@ python components for the tooz package.
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1489025894
+export SOURCE_DATE_EPOCH=1489273908
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1489025894
+export SOURCE_DATE_EPOCH=1489273908
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
