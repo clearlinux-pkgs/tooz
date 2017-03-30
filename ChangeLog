@@ -1,6 +1,35 @@
 CHANGES
 =======
 
+1.53.0
+------
+
+
+1.52.0
+------
+
+* FileDriver:Support multiple processes
+* Switch tests to use latest etcd - 3.1.3
+
+1.51.0
+------
+
+* pass on partitions
+* hashring: allow to use bytes as node name
+
+1.50.0
+------
+
+* postgresql: only pass username and password if they are set
+* Rewrite heartbeat runner with event
+* Adds authentication support for zookeeperDriver
+
+1.49.0
+------
+
+* support unicode node name
+* Update reno for stable/ocata
+
 1.48.0
 ------
 
