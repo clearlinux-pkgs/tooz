@@ -1,9 +1,21 @@
 CHANGES
 =======
 
+1.54.0
+------
+
+* redis: fix concurrent access on acquire()
+* tests: tests fail if no URL is set + run partitioner tests on basic drivers
+* tests: fix etcd and consul test run
+* add weight tests for add_nodes
+* get weight of existing members
+* coordination: do not get member list if not needed
+* Add shared filelock
+
 1.53.0
 ------
 
+* Enhance heartbeat sleep timer
 
 1.52.0
 ------
