@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xEB6CCA1483FA74EC (infra-root@openstack.org)
 #
 Name     : tooz
-Version  : 1.54.0
-Release  : 45
-URL      : http://tarballs.openstack.org/tooz/tooz-1.54.0.tar.gz
-Source0  : http://tarballs.openstack.org/tooz/tooz-1.54.0.tar.gz
-Source99 : http://tarballs.openstack.org/tooz/tooz-1.54.0.tar.gz.asc
+Version  : 1.55.0
+Release  : 46
+URL      : https://tarballs.openstack.org/tooz/tooz-1.55.0.tar.gz
+Source0  : https://tarballs.openstack.org/tooz/tooz-1.55.0.tar.gz
+Source99 : https://tarballs.openstack.org/tooz/tooz-1.55.0.tar.gz.asc
 Summary  : Coordination library for distributed systems.
 Group    : Development/Tools
 License  : Apache-2.0
@@ -64,16 +64,16 @@ python components for the tooz package.
 
 
 %prep
-%setup -q -n tooz-1.54.0
+%setup -q -n tooz-1.55.0
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1491225914
+export SOURCE_DATE_EPOCH=1492437613
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1491225914
+export SOURCE_DATE_EPOCH=1492437613
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force

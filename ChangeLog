@@ -1,6 +1,11 @@
 CHANGES
 =======
 
+1.55.0
+------
+
+* Implement heartbeat for FileDriver
+
 1.54.0
 ------
 
