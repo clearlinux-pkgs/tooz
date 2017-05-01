@@ -1,10 +1,19 @@
 CHANGES
 =======
 
+1.56.0
+------
+
+* doc: update heartbeat doc to use start\_heart=True
+* sql: close connection for lock if not used
+* http->https for security
+* etcd3: add etcd3 coordination driver
+
 1.55.0
 ------
 
 * Implement heartbeat for FileDriver
+* simplify hashring node lookup
 
 1.54.0
 ------
@@ -12,7 +21,7 @@ CHANGES
 * redis: fix concurrent access on acquire()
 * tests: tests fail if no URL is set + run partitioner tests on basic drivers
 * tests: fix etcd and consul test run
-* add weight tests for add_nodes
+* add weight tests for add\_nodes
 * get weight of existing members
 * coordination: do not get member list if not needed
 * Add shared filelock
@@ -58,23 +67,23 @@ CHANGES
 * Add partitioner implementation
 * Stop making tooz.utils depending on tooz.coordination
 * [doc] Note lack of constraints is a choice
-* The 'moves.moved_class' function creates a new class
+* The 'moves.moved\_class' function creates a new class
 * Add weight support to the hashring
-* coordination: allow to pass capabilities in join_group_create()
-* coordination: fix moved_class usage for ToozError
+* coordination: allow to pass capabilities in join\_group\_create()
+* coordination: fix moved\_class usage for ToozError
 * zookeeper: switch to standard group membership watching
 * Add a hashring implementation
 * Move ToozError to root module
 * Fixup concurrent modification
-* Replaces uuid.uuid4 with uuidutils.generate_uuid()
+* Replaces uuid.uuid4 with uuidutils.generate\_uuid()
 
 1.46.0
 ------
 
 * Do not re-set the members cache for watchers by default
-* coordination: add __repr__ for join/leave events
+* coordination: add \_\_repr\_\_ for join/leave events
 * coordination: renforce event based testing
-* Factorize member_id in the base coordinator class
+* Factorize member\_id in the base coordinator class
 * Use the internal group of list rather than listing the groups
 * Move the cached-based watcher implementation into its own class
 
@@ -82,11 +91,11 @@ CHANGES
 ------
 
 * Factorize group quit on stop()
-* coordination: make get_members() return a set
+* coordination: make get\_members() return a set
 * Replace 'assertTrue(a (not)in b)' with 'assert(Not)In(a, b)'
 * Changed author and author-email
 * redis: make sure we don't release and heartbeat a lock at the same time
-* coordinator: add join_group_create
+* coordinator: add join\_group\_create
 * Replace retrying with tenacity
 * Add CONTRIBUTING.rst
 * Replace 'assertTrue(a in b)' with 'assertIn(a, b)' and 'assertFalse(a in b)' with 'assertNotIn(a, b)'
@@ -102,10 +111,10 @@ CHANGES
 * Changed the home-page link
 * file: update .metadata atomically
 * file: return converted voluptuous data
-* file: move _load_and_validate to a method
-* file: move _read_{group,member}_id to staticmethod-s
+* file: move \_load\_and\_validate to a method
+* file: move \_read\_{group,member}\_id to staticmethod-s
 * etcd: run tests in clustering mode too
-* Use method ensure_tree from oslo.utils
+* Use method ensure\_tree from oslo.utils
 * Switch from Python 3.4 to Python 3.5
 * Install only needed packages
 * Fix a typo in file.py
@@ -122,10 +131,10 @@ CHANGES
 * etcd: don't run heartbeat() concurrently
 * Raise tooz error when unexpected last entries found
 * etcd: properly block when using 'wait'
-* Share _get_random_uuid() among all tests
+* Share \_get\_random\_uuid() among all tests
 * Updated from global requirements
 * Clean leave group hooks when unwatching
-* Fix the test test_unwatch_elected_as_leader
+* Fix the test test\_unwatch\_elected\_as\_leader
 * Updated from global requirements
 
 1.41.0
@@ -146,7 +155,7 @@ CHANGES
 * Remove unused iso8601 dependency
 * tests: remove testscenario usage
 * file: set no timeout by default
-* tests: move bad_url from scenarios to static test
+* tests: move bad\_url from scenarios to static test
 * Expose timeout capabilities and use them for tests
 * Use pifpaf to setup daemons
 
@@ -196,7 +205,7 @@ CHANGES
 ------
 
 * Updated from global requirements
-* Compute requires_beating
+* Compute requires\_beating
 * Fix calling acquire(blocking=False) twice leads to a deadlock
 
 1.32.0
@@ -209,8 +218,8 @@ CHANGES
 
 * Updated from global requirements
 * Updated from global requirements
-* Add .tox, *.pyo and *.egg to .gitignore
-* Enable OS_LOG_CAPTURE so that logs can be seen (on error)
+* Add .tox, \*.pyo and \*.egg to .gitignore
+* Enable OS\_LOG\_CAPTURE so that logs can be seen (on error)
 
 1.30.0
 ------
@@ -230,14 +239,14 @@ CHANGES
 * Add programatic introspection of drivers characteristic(s)
 * Updated from global requirements
 * pep8: fix remaining errors and enable all checks
-* Use utils.convert_blocking to convert blocking argument
+* Use utils.convert\_blocking to convert blocking argument
 * Adjust some of the zookeeper exception message
 * Fix etcd env setup
 * tests: do not hardcode /tmp
-* utils: replace exception_message by exception_to_unicode
+* utils: replace exception\_message by exception\_to\_unicode
 * Add a default port and default host
 * etcd: driver with lock support
-* Use utils.to_binary instead of using redis module equivalent
+* Use utils.to\_binary instead of using redis module equivalent
 * Remove tested under 2.6 from docs
 
 1.29.0
@@ -257,11 +266,11 @@ CHANGES
 1.28.0
 ------
 
-* Add 'requires_beating' property to coordination driver
+* Add 'requires\_beating' property to coordination driver
 * {pg,my}sql: fix AttributeError on connection failure
 * tests: allow ipc to bypass blocking=False test
 * pgsql: remove unused left-over code
-* Add 'is_still_owner' lock test function
+* Add 'is\_still\_owner' lock test function
 
 1.27.0
 ------
@@ -338,7 +347,7 @@ CHANGES
 
 * Remove tooz/openstack as it is empty and not used
 * Fix sp 'seonds' -> 'seconds'
-* Ensure run_watchers called from mixin, not base class
+* Ensure run\_watchers called from mixin, not base class
 * Updated from global requirements
 * Update compatibility matrix due to file drivers new abilities
 
@@ -346,7 +355,7 @@ CHANGES
 ------
 
 * No longer need kazoo lock custom retry code
-* Ensure unwatch_elected_as_leader correctly clears hooks
+* Ensure unwatch\_elected\_as\_leader correctly clears hooks
 
 0.16.0
 ------
@@ -354,15 +363,15 @@ CHANGES
 * Updated from global requirements
 * Updated from global requirements
 * Ensure lock(s) acquire/release returns boolean values
-* Expose 'run_elect_coordinator' and call it from 'run_watchers'
-* Share most of the `run_watchers` code via a common mixin
+* Expose 'run\_elect\_coordinator' and call it from 'run\_watchers'
+* Share most of the \`run\_watchers\` code via a common mixin
 * Remove 2.6 classifier
 * Remove file-driver special no-async abilities
 * Delay interpolating the LOG string
-* Use `encodeutils.exception_to_unicode` for exception -> string function
-* Use the `excutils.raise_with_cause` after doing our type check
+* Use \`encodeutils.exception\_to\_unicode\` for exception -> string function
+* Use the \`excutils.raise\_with\_cause\` after doing our type check
 * Updated from global requirements
-* Use the 'driver_lock' around read operations
+* Use the 'driver\_lock' around read operations
 * Updated from global requirements
 * Switch badges from 'pypip.in' to 'shields.io'
 * Updated from global requirements
@@ -372,7 +381,7 @@ CHANGES
 * Updated from global requirements
 * Use MySQL default port when not set explicitly
 * Use fasteners library for interprocess locks
-* Implement watch/unwatch elected_as_leader for redis driver
+* Implement watch/unwatch elected\_as\_leader for redis driver
 * Updated from global requirements
 * Use lua locks instead of pipeline locks
 * Move more string constants to class constants with docstrings
@@ -391,7 +400,7 @@ CHANGES
 * Provide ability for namespace customization for Zookeeper and Zake drivers
 * Typo in Locking doc
 * Move optional driver requirements to test-requirements.txt
-* Have run_watchers take a timeout and respect it
+* Have run\_watchers take a timeout and respect it
 * Heartbeat on acquired locks copy
 * Avoid using a thread local token storage
 
@@ -400,7 +409,7 @@ CHANGES
 
 * Fix param name to be its right name
 * Replace more instance(s) of exception chaining with helper
-* Just use staticmethod functions to create _dumps/_loads
+* Just use staticmethod functions to create \_dumps/\_loads
 * Uncap library requirements for liberty
 * Link AOF to redis persistence docs
 * Add exception docs to developer docs
@@ -470,14 +479,14 @@ CHANGES
 * redis: add support for group deletion
 * tests: minor code simplification
 * memcached: add support for group deletion
-* memcached: add support for _destroy_group
+* memcached: add support for \_destroy\_group
 * Switch to using oslosphinx
 * Add doc on how transaction is itself retrying internally
 * Fix .gitreview after rename/transfer
 * tests: use scenarios attributes for timeout capability
 * tests: check for leave group events on dead members cleanup
-* memcached: delete stale/dead group members on get_members()
-* tests: remove check_port
+* memcached: delete stale/dead group members on get\_members()
+* tests: remove check\_port
 * tests: do not skip test on connection error
 
 0.9
@@ -491,10 +500,10 @@ CHANGES
 * Allow tox with py34 and MySQL
 * Test connection error scenarios on more drivers
 * Translate psycopg2 errors/exceptions into tooz exceptions
-* Ensure 'leave_group' result gotten before further work
-* watch_leave_group not triggering callback on expired members
+* Ensure 'leave\_group' result gotten before further work
+* watch\_leave\_group not triggering callback on expired members
 * Add MySQL driver
-* Discard 'self' from '_joined_groups' if we got booted out
+* Discard 'self' from '\_joined\_groups' if we got booted out
 * Implement non-blocking locks with PostgreSQL
 * More retry code out of memcached
 * Add a PostgreSQL driver
@@ -510,7 +519,7 @@ CHANGES
 * Avoid logging warnings when group deleted or member gone
 * Ensure that we correctly expire (and cleanup) redis members
 * Various fixes for locks and version compatibility
-* Move sysv_ipc deps to test-requirements
+* Move sysv\_ipc deps to test-requirements
 
 0.8
 ---
@@ -562,7 +571,7 @@ CHANGES
 * Change inline docs about class fake storage variable
 * LOG a warning if the heartbeat can not be validated
 * Add doc8 to the py27 test running
-* Use the more reliable sysv_ipc instead of posix_ipc+lockutils
+* Use the more reliable sysv\_ipc instead of posix\_ipc+lockutils
 * Only start zookeeper/memcached when not already running
 * Let zake act as a in-memory fully functional driver
 * Switch to a custom NotImplemented error
@@ -580,7 +589,7 @@ CHANGES
 ---
 
 * Switch to URL for loading backends
-* Import network_utils from Oslo
+* Import network\_utils from Oslo
 * coordination: add IPC driver
 * coordination: raise NotImplementedError as default
 * Add documentation
@@ -600,14 +609,14 @@ CHANGES
 
 * memcached: add locking
 * coordination: implement lock mechanism in ZK
-* coordination, zookeeper: add get_leader()
+* coordination, zookeeper: add get\_leader()
 * coordination, zookeeper: implement leader election
 * coordination: remove wrong comment in tests
 * memcached: add support for leave events
-* memcached: implement {un,}watch_join_group()
+* memcached: implement {un,}watch\_join\_group()
 * coordination: raise GroupNotCreated when watching uncreated group
-* coordination, zookeeper: add {un,}watch_leave_group
-* coordination, zookeeper: add watch_join_group
+* coordination, zookeeper: add {un,}watch\_leave\_group
+* coordination, zookeeper: add watch\_join\_group
 * tests: skip test if function is not implemented
 * coordination: add hooks system
 * Add memcached driver
@@ -622,12 +631,12 @@ CHANGES
 * tests: test capabilities on non existent group/member
 * tests: add a test for group already existing
 * tests: fix variable name
-* Fix the default prototype for join_group
+* Fix the default prototype for join\_group
 * Adds basic tests which deals with exceptions
-* Fixes TypeError in _leave_group_handler
-* Remove _wrap_call_kazoo
+* Fixes TypeError in \_leave\_group\_handler
+* Remove \_wrap\_call\_kazoo
 * Add asynchronous API
-* Delete models.py and clean get_members()
+* Delete models.py and clean get\_members()
 * Add a fake ZooKeeper driver
 * Allow passing in a handler
 * First commit of Tooz
