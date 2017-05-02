@@ -6,7 +6,7 @@
 #
 Name     : tooz
 Version  : 1.56.0
-Release  : 47
+Release  : 48
 URL      : https://tarballs.openstack.org/tooz/tooz-1.56.0.tar.gz
 Source0  : https://tarballs.openstack.org/tooz/tooz-1.56.0.tar.gz
 Source99 : https://tarballs.openstack.org/tooz/tooz-1.56.0.tar.gz.asc
