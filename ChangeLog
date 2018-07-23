@@ -1,6 +1,94 @@
 CHANGES
 =======
 
+1.62.0
+------
+
+* Trivial: Update pypi url to new url
+* set default python to python3
+* Implement group support for etcd3gw
+
+1.61.0
+------
+
+* Zuul: Remove project name
+* Zuul: Remove project name
+* Update reno for stable/queens
+* partitioner: do not use hash() to determine object identity
+* msgpack-python has been renamed to msgpack
+* Follow the new PTI for document build
+* Remove tox\_install.sh
+* Use native Zuul v3 tox jobs
+* Add doc/requirements.txt
+* Remove setting of version/release from releasenotes
+* Zuul: add file extension to playbook path
+* Move legacy jobs to project
+
+1.59.0
+------
+
+* Acquire fails with "ToozError: Not found"
+* redis: always remove lock from acquired lock when release()ing
+* redis: log an error on release failure
+* Use the same default timeout for async result
+* Update reno for stable/pike
+
+1.58.0
+------
+
+* Update URLs in documents according to document migration
+* doc: use list-table for driver support tables
+* rearrange existing documentation to fit the new standard layout
+
+1.57.4
+------
+
+* Switch from oslosphinx to openstackdocstheme
+* Turn on warning-is-error in doc build
+* Add etcd3 group support
+
+1.57.3
+------
+
+* Make sure Lock.heartbeat() returns True/False
+* etcd3: skip ProcessPool based test
+* etcd3: replace custom lock code by more recent etcd3 lock code
+* pgsql: fix self.\_conn.close() being called without connection
+* test: leverage existing helper method in test\_partitioner
+* coordination: remove double serialization of capabilities
+* tests: fix missing .get() on some group operations
+* Mutualize executor code in a mixin class
+* coordination: fix reversed fiels for \_\_repr\_\_ for events
+* Fix docstring for group and member id
+
+1.57.2
+------
+
+* {my,pg}sql: close connections when out of retry
+* Disable test\_get\_lock\_serial\_locking\_two\_lock\_process for etcd3
+* Simplify env list and test running
+* Factorize tox envlist for better readability
+
+1.57.1
+------
+
+* consul: remove unused executor
+
+1.57.0
+------
+
+* Separate etcd3gw driver that uses the etcd3 grpc gateway
+* etcd3: use discard() rather than remove()
+* etcd: fix blocking argument
+* etcd: fix acquire(blocking=True) on request exception
+* etcd3: fix test run
+* coordination: factorize common async result futures code
+
+1.56.1
+------
+
+* Fix psycopg2 connection argument
+
 1.56.0
 ------
 
