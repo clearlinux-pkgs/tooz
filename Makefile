@@ -1,5 +1,5 @@
 PKG_NAME := tooz
-URL = https://files.pythonhosted.org/packages/64/e8/60a155f699205e19888d8faf1ba7c0a972578983fafc1758e68e0d52d50e/tooz-1.62.0.tar.gz
+URL = https://files.pythonhosted.org/packages/71/73/3f72b1591ed0e621a17fff1a79ba45c87ac9b0c08ec1dbc880c5e06dca41/tooz-1.63.0.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
