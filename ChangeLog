@@ -1,9 +1,14 @@
 CHANGES
 =======
 
+1.63.1
+------
+
+
 1.63.0
 ------
 
+* coordination: do not retry the whole heartbeat on fail
 * Use templates for cover
 * Migrate to stestr
 * Fix coverage tests
