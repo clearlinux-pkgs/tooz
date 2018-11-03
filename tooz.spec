@@ -4,7 +4,7 @@
 #
 Name     : tooz
 Version  : 1.63.1
-Release  : 53
+Release  : 54
 URL      : https://files.pythonhosted.org/packages/ce/3a/34381bcbca7169feddb4a98b97997930f23f2cb3f107743188e9e4b2e0a4/tooz-1.63.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/ce/3a/34381bcbca7169feddb4a98b97997930f23f2cb3f107743188e9e4b2e0a4/tooz-1.63.1.tar.gz
 Summary  : Coordination library for distributed systems.
@@ -28,7 +28,6 @@ Requires: psycopg2
 Requires: pymemcache
 Requires: redis
 Requires: reno
-Requires: requests
 Requires: six
 Requires: stevedore
 Requires: tenacity
@@ -74,7 +73,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1541262892
+export SOURCE_DATE_EPOCH=1541280373
 python3 setup.py build
 
 %install
