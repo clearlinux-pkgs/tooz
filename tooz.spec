@@ -4,7 +4,7 @@
 #
 Name     : tooz
 Version  : 1.63.1
-Release  : 54
+Release  : 55
 URL      : https://files.pythonhosted.org/packages/ce/3a/34381bcbca7169feddb4a98b97997930f23f2cb3f107743188e9e4b2e0a4/tooz-1.63.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/ce/3a/34381bcbca7169feddb4a98b97997930f23f2cb3f107743188e9e4b2e0a4/tooz-1.63.1.tar.gz
 Summary  : Coordination library for distributed systems.
