@@ -4,7 +4,7 @@
 #
 Name     : tooz
 Version  : 1.64.0
-Release  : 56
+Release  : 57
 URL      : https://files.pythonhosted.org/packages/e6/2a/d40793117438f8d658291d9677b35f381b978cafbe8cc2b41d27396f706a/tooz-1.64.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/e6/2a/d40793117438f8d658291d9677b35f381b978cafbe8cc2b41d27396f706a/tooz-1.64.0.tar.gz
 Summary  : Coordination library for distributed systems.
@@ -36,6 +36,7 @@ Requires: voluptuous
 Requires: zake
 BuildRequires : buildreq-distutils3
 BuildRequires : pbr
+Patch1: deps.patch
 
 %description
 Tooz
@@ -72,13 +73,14 @@ python3 components for the tooz package.
 
 %prep
 %setup -q -n tooz-1.64.0
+%patch1 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1546958823
+export SOURCE_DATE_EPOCH=1546962921
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
