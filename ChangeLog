@@ -1,6 +1,12 @@
 CHANGES
 =======
 
+1.64.0
+------
+
+* Unblock tooz gate
+* Change openstack-dev to openstack-discuss
+
 1.63.1
 ------
 
