@@ -4,7 +4,7 @@
 #
 Name     : tooz
 Version  : 1.64.1
-Release  : 58
+Release  : 59
 URL      : https://files.pythonhosted.org/packages/8b/7a/c1c61f4037a7465cd7db59104df915d9fc7e0a578acbbb75da4dfc968633/tooz-1.64.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/8b/7a/c1c61f4037a7465cd7db59104df915d9fc7e0a578acbbb75da4dfc968633/tooz-1.64.1.tar.gz
 Summary  : Coordination library for distributed systems.
@@ -13,27 +13,19 @@ License  : Apache-2.0
 Requires: tooz-license = %{version}-%{release}
 Requires: tooz-python = %{version}-%{release}
 Requires: tooz-python3 = %{version}-%{release}
-Requires: PyMySQL
-Requires: Sphinx
 Requires: enum34
 Requires: fasteners
 Requires: futures
 Requires: futurist
 Requires: grpcio
 Requires: msgpack
-Requires: openstackdocstheme
 Requires: oslo.serialization
 Requires: oslo.utils
 Requires: pbr
-Requires: psycopg2
-Requires: pymemcache
-Requires: redis
-Requires: reno
 Requires: six
 Requires: stevedore
 Requires: tenacity
 Requires: voluptuous
-Requires: zake
 BuildRequires : buildreq-distutils3
 BuildRequires : pbr
 Patch1: deps.patch
@@ -80,7 +72,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1550243086
+export SOURCE_DATE_EPOCH=1551029780
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
