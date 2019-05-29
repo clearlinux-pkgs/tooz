@@ -4,7 +4,7 @@
 #
 Name     : tooz
 Version  : 1.64.2
-Release  : 61
+Release  : 62
 URL      : https://files.pythonhosted.org/packages/de/68/09fb134add70cda9177892d218669919175cfd14f5081c7469aed3012d38/tooz-1.64.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/de/68/09fb134add70cda9177892d218669919175cfd14f5081c7469aed3012d38/tooz-1.64.2.tar.gz
 Summary  : Coordination library for distributed systems.
@@ -15,7 +15,6 @@ Requires: tooz-python = %{version}-%{release}
 Requires: tooz-python3 = %{version}-%{release}
 Requires: enum34
 Requires: fasteners
-Requires: futures
 Requires: futurist
 Requires: grpcio
 Requires: msgpack
@@ -27,15 +26,22 @@ Requires: stevedore
 Requires: tenacity
 Requires: voluptuous
 BuildRequires : buildreq-distutils3
+BuildRequires : enum34
+BuildRequires : fasteners
+BuildRequires : futurist
+BuildRequires : grpcio
+BuildRequires : msgpack
+BuildRequires : oslo.serialization
+BuildRequires : oslo.utils
 BuildRequires : pbr
+BuildRequires : six
+BuildRequires : stevedore
+BuildRequires : tenacity
+BuildRequires : voluptuous
 Patch1: deps.patch
 
 %description
-Tooz
 ====
-.. image:: https://img.shields.io/pypi/v/tooz.svg
-:target: https://pypi.org/project/tooz/
-:alt: Latest Version
 
 %package license
 Summary: license components for the tooz package.
@@ -72,11 +78,17 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1551158488
+export SOURCE_DATE_EPOCH=1559109817
+export GCC_IGNORE_WERROR=1
+export CFLAGS="$CFLAGS -fno-lto "
+export FCFLAGS="$CFLAGS -fno-lto "
+export FFLAGS="$CFLAGS -fno-lto "
+export CXXFLAGS="$CXXFLAGS -fno-lto "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
 %install
+export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/tooz
 cp LICENSE %{buildroot}/usr/share/package-licenses/tooz/LICENSE
