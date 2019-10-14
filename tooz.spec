@@ -4,7 +4,7 @@
 #
 Name     : tooz
 Version  : 1.64.2
-Release  : 62
+Release  : 63
 URL      : https://files.pythonhosted.org/packages/de/68/09fb134add70cda9177892d218669919175cfd14f5081c7469aed3012d38/tooz-1.64.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/de/68/09fb134add70cda9177892d218669919175cfd14f5081c7469aed3012d38/tooz-1.64.2.tar.gz
 Summary  : Coordination library for distributed systems.
@@ -13,7 +13,6 @@ License  : Apache-2.0
 Requires: tooz-license = %{version}-%{release}
 Requires: tooz-python = %{version}-%{release}
 Requires: tooz-python3 = %{version}-%{release}
-Requires: enum34
 Requires: fasteners
 Requires: futurist
 Requires: grpcio
@@ -26,7 +25,6 @@ Requires: stevedore
 Requires: tenacity
 Requires: voluptuous
 BuildRequires : buildreq-distutils3
-BuildRequires : enum34
 BuildRequires : fasteners
 BuildRequires : futurist
 BuildRequires : grpcio
@@ -77,8 +75,8 @@ python3 components for the tooz package.
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1559109817
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1571088261
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$CFLAGS -fno-lto "
@@ -91,7 +89,7 @@ python3 setup.py build
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/tooz
-cp LICENSE %{buildroot}/usr/share/package-licenses/tooz/LICENSE
+cp %{_builddir}/tooz-1.64.2/LICENSE %{buildroot}/usr/share/package-licenses/tooz/294b43b2cec9919063be1a3b49e8722648424779
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
@@ -102,7 +100,7 @@ echo ----[ mark ]----
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/tooz/LICENSE
+/usr/share/package-licenses/tooz/294b43b2cec9919063be1a3b49e8722648424779
 
 %files python
 %defattr(-,root,root,-)
