@@ -4,7 +4,7 @@
 #
 Name     : tooz
 Version  : 1.64.2
-Release  : 64
+Release  : 65
 URL      : https://files.pythonhosted.org/packages/de/68/09fb134add70cda9177892d218669919175cfd14f5081c7469aed3012d38/tooz-1.64.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/de/68/09fb134add70cda9177892d218669919175cfd14f5081c7469aed3012d38/tooz-1.64.2.tar.gz
 Summary  : Coordination library for distributed systems.
@@ -62,6 +62,17 @@ python components for the tooz package.
 Summary: python3 components for the tooz package.
 Group: Default
 Requires: python3-core
+Provides: pypi(tooz)
+Requires: pypi(fasteners)
+Requires: pypi(futurist)
+Requires: pypi(msgpack)
+Requires: pypi(oslo.serialization)
+Requires: pypi(oslo.utils)
+Requires: pypi(pbr)
+Requires: pypi(six)
+Requires: pypi(stevedore)
+Requires: pypi(tenacity)
+Requires: pypi(voluptuous)
 
 %description python3
 python3 components for the tooz package.
@@ -69,6 +80,7 @@ python3 components for the tooz package.
 
 %prep
 %setup -q -n tooz-1.64.2
+cd %{_builddir}/tooz-1.64.2
 %patch1 -p1
 
 %build
@@ -76,7 +88,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1571088261
+export SOURCE_DATE_EPOCH=1583717209
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$CFLAGS -fno-lto "
